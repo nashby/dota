@@ -16,4 +16,21 @@ describe Dota::Client do
     match = client.match(27110133)
     match.must_be_nil
   end
+
+  it 'returns leagues' do
+    stub_request(:get,  'https://api.steampowered.com/IDOTA2Match_570/GetLeagueListing/V001/?key=TEST_API_KEY').
+      to_return(status: 200, body: fixture(:league_listing))
+
+    leagues = client.leagues
+    leagues.must_be_kind_of Array
+    leagues.first.must_be_kind_of Dota::League
+  end
+
+  it 'returns nil if there are no leagues' do
+    stub_request(:get,  'https://api.steampowered.com/IDOTA2Match_570/GetLeagueListing/V001/?key=TEST_API_KEY').
+      to_return(status: 200, body: {})
+
+    leagues = client.leagues
+    leagues.must_be_nil
+  end
 end

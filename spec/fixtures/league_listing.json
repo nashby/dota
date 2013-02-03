@@ -1,0 +1,175 @@
+{
+  "result": {
+    "leagues": [
+      {
+        "name": "Killing Spree: North America",
+        "leagueid": 25,
+        "description": "Killing Spree is a perpetual King of the Hill event featuring four premier teams from North America. Each team will battle their way to the top and attempt to win three matches in a row for a \"killing spree\". Hosted by NEO Dota.",
+        "tournament_url": "http:\/\/neodota.com\/?page_id=1389"
+      },
+      {
+        "name": "Wild Cards West",
+        "leagueid": 2,
+        "description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
+        "tournament_url": "http:\/\/www.dota2.com\/tournaments\/international\/"
+      },
+      {
+        "name": "Wild Cards East",
+        "leagueid": 3,
+        "description": "Watch eight of the best Dota 2 teams compete for a spot in The International",
+        "tournament_url": "http:\/\/www.dota2.com\/tournaments\/international\/"
+      },
+      {
+        "name": "The Defense",
+        "leagueid": 4,
+        "description": "The Defense is the most prestigious Dota 2 online tournament held by joinDOTA, powered by Razer & BenQ. Featuring 20 hand-selected world-class teams and four community wildcard winners $10,000 prize money await only the toughest and most experienced of contestants on their way to the top.",
+        "tournament_url": "http:\/\/www.the-defense.com\/en\/start"
+      },
+      {
+        "name": "It's Gosu Monthly Madness Asia",
+        "leagueid": 5,
+        "description": "It's Gosu Monthly Madness is a Dota 2 tournament hosted by It's Gosu eSports and generously sponsored by Own3D.Tv, Razer and NOS Energy Drinks. Throughout the month of July, 16 of the best teams in Asia will clash and only the finalists will share a part of the prizepool of $1,000.",
+        "tournament_url": "http:\/\/www.itsgosu.com\/game\/dota2\/articles\/it-s-gosu-announces-monthly-madness-asia-edition_563"
+      },
+      {
+        "name": "Star Series Season II Lan Final",
+        "leagueid": 6,
+        "description": "Star Series is one of the most prestigious Dota 2 leagues held by StarLadder, and powered by Intel and Asus. The keystone of Star Series is the LAN final, which is held in Kiev CyberSport Arena, Ukraine. Watch the six best teams compete for the Grand Prize of $15,000 and the title Star Series Champion.",
+        "tournament_url": "http:\/\/dota2.starladder.tv\/news\/1182"
+      },
+      {
+        "name": "BeyondTheSummit World Tour",
+        "leagueid": 7,
+        "description": "BeyondTheSummit World Tour features 15 of the 16 teams attending The International. Brought to you in association with DotaCommentaries this warmup event is sure to whet your appetite as competitors from four different continents compete for the $1,000 prize that awaits only the top placing team.",
+        "tournament_url": "http:\/\/www.dotacommentaries.com\/index.php\/bts-wt\/"
+      },
+      {
+        "name": "Prodota 2 Worldwide League",
+        "leagueid": 8,
+        "description": "Prodota 2 takes its tournament to the world stage during the play-offs, featuring some of the most well known and talented teams from around the globe. With $30,000 in prize money on the line we'll find out which region of the world truly has the best of the best!",
+        "tournament_url": "http:\/\/www.prodota2.com\/"
+      },
+      {
+        "name": "Machinima ECAL: Americas",
+        "leagueid": 9,
+        "description": "ECAL playoffs will feature 3 teams from the international: EG, coL, and aL along with up and coming teams in the competitive scene such as Quantic Gaming and POTM BOTTOM. A $3,000 prize pool sponsored by Machinima will be offered to the victors.",
+        "tournament_url": "http:\/\/www.ecal.tv\/playoffs"
+      },
+      {
+        "name": "The Internal",
+        "leagueid": 65000,
+        "description": "This is the test tournament for the systems that will be used at The International. Watch the best Dota 2 teams in Bellevue compete for the grand prize of being hated by their coworkers.",
+        "tournament_url": "http:\/\/www.dota2.com\/tournaments\/international\/"
+      },
+      {
+        "name": "Razer Mini Madness",
+        "leagueid": 10,
+        "description": "Razer Mini Madness is a Dota 2 tournament hosted by It's Gosu eSports and generously sponsored by Razer. Eight of the best teams in Asia will compete and will try to bag the $500 prize. This tournament is the last opportunity for the teams to get ready for this year's The International.",
+        "tournament_url": "http:\/\/www.itsgosu.com\/game\/dota2\/articles\/it-s-gosu-presents-razer-mini-madness_621"
+      },
+      {
+        "name": "AbsoluteArena King of the Hill",
+        "leagueid": 11,
+        "description": "AbsoluteArena King of the Hill is a tournament consisting of a weekly match-up between two teams in a best-of-5 format. The first win is $100, and the prize increases every week by $100. Teams are able to win five games in a row ($1500) at which time the series starts over.",
+        "tournament_url": "http:\/\/www.absolutelegends.net\/news\/2069\/AbsoluteArena-King-of-the-Hill-Schedule-Update"
+      },
+      {
+        "name": "The International",
+        "leagueid": 65001,
+        "description": "Watch the top 16 teams from around the world compete in The International.",
+        "tournament_url": "http:\/\/www.dota2.com\/"
+      },
+      {
+        "name": "RaidCall Dota 2 League",
+        "leagueid": 12,
+        "description": "The RaidCall Dota 2 League is a $10,000 online Dota 2 tournament series featuring the top Dota 2 teams from around the globe. Broadcast four days a week for over eight weeks, the D2L (as it's commonly called) is commentated live by Ayesee and invited guests.",
+        "tournament_url": "http:\/\/d2l.evilgeniuses.net"
+      },
+      {
+        "name": "Star Series Season III",
+        "leagueid": 13,
+        "description": "StarLadder's Star Series is one of the most prestigious Dota 2 leagues, powered by Intel & Asus and casted by v1lat and TobiWan. The keystone of Star Series is the LAN final, held in Kiev CyberSport Arena, Ukraine. Watch the best Dota 2 teams compete for $15,000 and the title Star Series Champion.",
+        "tournament_url": "http:\/\/dota2.starladder.tv"
+      },
+      {
+        "name": "GEST Dota 2",
+        "leagueid": 14,
+        "description": "The Gigabyte E-Sports Tournament is sponsored by Gigabyte and hosted by DotaTalk. The winners of six qualifiers from South-East Asia will face off against veteran teams for a cash prize of $1,500 and the chance to compete against two of the best Chinese teams, IG and LGD, for another $1500.",
+        "tournament_url": "http:\/\/www.dotatalk.com\/tournaments\/gest\/"
+      },
+      {
+        "name": "Premier League",
+        "leagueid": 15,
+        "description": "Fueled by joint forces of TwitchTV and SteelSeries, Season 3 is the newest edition of The Premier League. Watch 10 of the best teams from both Europe and North America contend for $6,000 with 5 intense matches every week for 9 weeks. Commentary by TriumphOfMan.",
+        "tournament_url": "www.thepremierleague.eu"
+      },
+      {
+        "name": "GosuLeague",
+        "leagueid": 16,
+        "description": "GosuLeague delivers seasons on a monthly basis where teams of all skill levels play in different divisions. The top division is awarded with $5000 each month. Each team play two matches a week.",
+        "tournament_url": "http:\/\/play.gosugamers.net\/events\/48:gosuleague-season-4"
+      },
+      {
+        "name": "G-1 Championship League",
+        "leagueid": 17,
+        "description": "The G-1 Championship League, hosted by 17173 Games, is the first Dota 2 tournament in China. Exciting matches await with teams like iG, LGD and DK competing for a prize pool of $50,000.",
+        "tournament_url": "http:\/\/media.17173.com\/dota\/g1\/"
+      },
+      {
+        "name": "atoD 2",
+        "leagueid": 18,
+        "description": "atoD 2 features 8 top North American and European teams. Using Reverse Captain's Mode, teams will surely play unconventional heroes and sabotage each other's lineups.  With some of the proceeds going to the prize it's the first tournament to include a direct way for fans to increase the prizepool.",
+        "tournament_url": ""
+      },
+      {
+        "name": "It's Gosu Asia Madness",
+        "leagueid": 19,
+        "description": "It's Gosu returns with its third edition of the Asia Madness where the ten best teams from Asia will be competing for a prize pool of $5,000 in a triple elimination format.",
+        "tournament_url": "http:\/\/www.itsgosu.com\/game\/dota2\/articles\/it-s-gosu-asia-madness-for-love-completes-the-line-up_802"
+      },
+      {
+        "name": "DreamHack Dota 2 Corsair Vengeance Cup",
+        "leagueid": 65002,
+        "description": "Watch the DreamHack Dota 2 Corsair Vengeance Cup at this year's Dreamhack Winter where 16 teams compete for the 200 000 SEK prize purse. The Grand Final is played in the DreamArena Extreme in front of 1100 fans.",
+        "tournament_url": "www.dreamhack.se"
+      },
+      {
+        "name": "Star Series Season IV",
+        "leagueid": 20,
+        "description": "StarLadder's Star Series is one of the most prestigious Dota 2 leagues, powered by Intel & Asus and casted by v1lat and TobiWan. The keystone of Star Series is the LAN final, held in Kiev CyberSport Arena, Ukraine. Watch the best Dota 2 teams compete for $15,000 and the title Star Series Champion.",
+        "tournament_url": "http:\/\/dota2.starladder.tv"
+      },
+      {
+        "name": "The Defense 3",
+        "leagueid": 21,
+        "description": "The Defense is back with new sponsors ROCCAT and own3D.tv. Watch 24 invited professional teams and 8 teams from an open qualifier battle for a prize pool of $20,000. This ticket will entitle you to over 100 broadcasted matches by Toby \"Tobi Wan Kenobi\" Dawson as well as one exclusive courier.",
+        "tournament_url": "http:\/\/www.the-defense.com\/en\/start"
+      },
+      {
+        "name": "RaidCall Dota 2 League Season 2",
+        "leagueid": 22,
+        "description": "The RaidCall Dota 2 League returns for a second $10,000 season. The top twelve teams in the western world battle it out six days a week for eleven total weeks live with commentary by Ayesee and Draskyl. Over 120 matches guaranteed.",
+        "tournament_url": "http:\/\/d2l.evilgeniuses.net"
+      },
+      {
+        "name": "Dota 2 The Asia",
+        "leagueid": 23,
+        "description": "This December Malaysia will be the focal point for all things eSports in Asia as gamers from all around the region turn their attention to what will be its last major eSporting event for the year - The Games Expo (TGX) Malaysia.",
+        "tournament_url": "http:\/\/e-clubmalaysia.com\/dota2\/?page_id=2701 "
+      },
+      {
+        "name": "G-League 2012",
+        "leagueid": 24,
+        "description": "The famous G-League Tournament makes its Dota 2 debut on Dec. 25. Watch the best 8 asian teams, including IG, LGD and DK, compete for a prize pool of $40,000. Hosted by GameFY",
+        "tournament_url": "http:\/\/gleague.gamefy.cn\/"
+      },
+      {
+        "name": "SEA League",
+        "leagueid": 26,
+        "description": "The SEA League features SEA's finest teams as they compete in several stages of the tournament. Two weeks of intense action will be commentated by GoDz and LD of BeyondthesummitTV.",
+        "tournament_url": "http:\/\/sealeague.wordpress.com\/"
+      }
+    ]
+
+  }
+}
