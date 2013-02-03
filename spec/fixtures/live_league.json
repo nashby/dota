@@ -1,0 +1,99 @@
+{
+  "players": [
+    {
+      "account_id": 26290891,
+      "name": "HolyMaster",
+      "hero_id": 0,
+      "team": 4
+    },
+    {
+      "account_id": 44463405,
+      "name": "EG.Bdiz [RC]",
+      "hero_id": 90,
+      "team": 0
+    },
+    {
+      "account_id": 85805514,
+      "name": "EG.DeMoN [RC]",
+      "hero_id": 86,
+      "team": 0
+    },
+    {
+      "account_id": 87177591,
+      "name": "EG.Fear [RC]",
+      "hero_id": 12,
+      "team": 0
+    },
+    {
+      "account_id": 94155156,
+      "name": "Fnatic.Fly",
+      "hero_id": 79,
+      "team": 1
+    },
+    {
+      "account_id": 33366656,
+      "name": "joinDOTA|Tob|Wan!",
+      "hero_id": 0,
+      "team": 2
+    },
+    {
+      "account_id": 87360406,
+      "name": "EG.Jeyo [RC]",
+      "hero_id": 54,
+      "team": 0
+    },
+    {
+      "account_id": 100317750,
+      "name": "Fnatic.Era",
+      "hero_id": 41,
+      "team": 1
+    },
+    {
+      "account_id": 19672354,
+      "name": "Fnatic.N0tail",
+      "hero_id": 34,
+      "team": 1
+    },
+    {
+      "account_id": 21265941,
+      "name": "Fnatic.H4nn1",
+      "hero_id": 7,
+      "team": 1
+    },
+    {
+      "account_id": 59457413,
+      "name": "EG.Maelk [RC]",
+      "hero_id": 53,
+      "team": 0
+    },
+    {
+      "account_id": 31252614,
+      "name": "joinDOTA|HamSandwich",
+      "hero_id": 0,
+      "team": 4
+    },
+    {
+      "account_id": 8712306,
+      "name": "Fnatic.Trixi",
+      "hero_id": 88,
+      "team": 1
+    }
+  ]
+  ,
+  "radiant_team": {
+    "team_name": "Evil Geniuses",
+    "team_id": 39,
+    "team_logo": 1155424861288756748,
+    "complete": true
+  },
+  "dire_team": {
+    "team_name": "FnaticRaidCall",
+    "team_id": 38,
+    "team_logo": 594720461594939548,
+    "complete": true
+  },
+  "lobby_id": 22813809906189926,
+  "spectators": 2485,
+  "tower_state": 4040484,
+  "league_id": 21
+}

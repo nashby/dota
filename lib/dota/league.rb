@@ -2,7 +2,7 @@ module Dota
   class League
     attr_reader :raw_league
 
-    # Initializes a new Match object
+    # Initializes a new League object
     #
     # @param raw_match [Hash]
     def initialize(raw_league)

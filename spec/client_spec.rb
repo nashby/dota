@@ -33,4 +33,21 @@ describe Dota::Client do
     leagues = client.leagues
     leagues.must_be_nil
   end
+
+  it 'returns live leagues' do
+    stub_request(:get,  'https://api.steampowered.com/IDOTA2Match_570/GetLiveLeagueGames/V001/?key=TEST_API_KEY').
+      to_return(status: 200, body: fixture(:live_league_games))
+
+    live_leagues = client.live_leagues
+    live_leagues.must_be_kind_of Array
+    live_leagues.first.must_be_kind_of Dota::LiveLeague
+  end
+
+  it 'returns nil if there are no live leagues' do
+    stub_request(:get,  'https://api.steampowered.com/IDOTA2Match_570/GetLiveLeagueGames/V001/?key=TEST_API_KEY').
+      to_return(status: 200, body: {})
+
+    live_leagues = client.live_leagues
+    live_leagues.must_be_nil
+  end
 end

@@ -3,6 +3,7 @@ require 'dota/connection'
 
 require 'dota/match'
 require 'dota/league'
+require 'dota/live_league'
 
 module Dota
   class Client
@@ -42,6 +43,18 @@ module Dota
 
       if response['result'] && (leagues = response['result']['leagues'])
         leagues.map { |league| League.new(league) }
+      end
+    end
+
+    # All live leagues list
+    #
+    # @return [Dota::League] league object
+    def live_leagues(options = {})
+      url = "https://api.steampowered.com/IDOTA2Match_570/GetLiveLeagueGames/V001/?key=#{config.api_key}"
+      response = connection.request(:get, url, options)
+
+      if response['result'] && (leagues = response['result']['games'])
+        leagues.map { |league| LiveLeague.new(league) }
       end
     end
   end
