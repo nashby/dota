@@ -1,3 +1,5 @@
+require 'dota/player'
+
 module Dota
   class Match
     attr_reader :raw_match
@@ -35,6 +37,15 @@ module Dota
     # @return [Integer]
     def first_blood
       raw_match['first_blood_time']
+    end
+
+    # Array of players
+    #
+    # @return [Array<Dota::Player>] array of Dota::Player objects
+    def players
+      raw_match['players'].map do |raw_player|
+        Player.new(raw_player)
+      end
     end
   end
 end

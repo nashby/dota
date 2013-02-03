@@ -23,4 +23,9 @@ describe Dota::Match do
   it 'returns first blood time' do
     match.first_blood.must_equal 133
   end
+
+  it 'returns players' do
+    match.players.must_be_kind_of Array
+    match.players.first.must_be_kind_of Dota::Player
+  end
 end

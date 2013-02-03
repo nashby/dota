@@ -17,7 +17,7 @@ module SpecHelper
   end
 
   def fixture(name)
-    File.read(File.expand_path("../fixtures/#{name}.json", __FILE__))
+    JSON.parse(File.read(File.expand_path("../fixtures/#{name}.json", __FILE__)))
   end
 end
 
