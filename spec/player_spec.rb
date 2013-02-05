@@ -57,6 +57,30 @@ describe Dota::Player do
     player.last_hits.must_equal 98
   end
 
+  it 'returns the number of times a player denied a creep' do
+    player.denies.must_equal 2
+  end
+
+  it 'returns the total amount of gold the player spent over the entire match' do
+    player.gold_spent.must_equal 7185
+  end
+
+  it 'returns the amount of damage the player dealt to heroes' do
+    player.hero_damage.must_equal 8270
+  end
+
+  it 'returns the amount of damage the player dealt to towers' do
+    player.tower_damage.must_equal 597
+  end
+
+  it 'returns the amount of damage on other players that the player healed' do
+    player.hero_healing.must_equal 39
+  end
+
+  it 'returns the final level' do
+    player.level.must_equal 13
+  end
+
   it 'returns items' do
     player.items.must_equal ['phase_boots', 'mekansm', 'ring_of_basilius', 'magic_wand', 'bracer', 'bracer']
   end

@@ -97,6 +97,48 @@ module Dota
       raw_player['last_hits']
     end
 
+    # The number of times a player denied a creep
+    #
+    # @return [Integer]
+    def denies
+      raw_player['denies']
+    end
+
+    # The total amount of gold the player spent over the entire match
+    #
+    # @return [Integer]
+    def gold_spent
+      raw_player['gold_spent']
+    end
+
+    # The amount of damage the player dealt to heroes
+    #
+    # @return [Integer]
+    def hero_damage
+      raw_player['hero_damage']
+    end
+
+    # The amount of damage the player dealt to towers
+    #
+    # @return [Integer]
+    def tower_damage
+      raw_player['tower_damage']
+    end
+
+    # The amount of damage on other players that the player healed
+    #
+    # @return [Integer]
+    def hero_healing
+      raw_player['hero_healing']
+    end
+
+    # The final level
+    #
+    # @return [Integer]
+    def level
+      raw_player['level']
+    end
+
     # The player's total xp/min
     #
     # @return [Integer]
