@@ -69,7 +69,7 @@ module Dota
 
     # Leaver status
     #
-    # @return [Symbol] :bot, :abondoned, :left_safe, :played
+    # @return [Symbol] :bot, :abandoned, :left_safe, :played
     def leaver_status
       case raw_player['leaver_status']
       when 0
@@ -77,7 +77,7 @@ module Dota
       when 1
         :left_safe
       when 2
-        :abondoned
+        :abandoned
       else
         :bot
       end

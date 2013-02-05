@@ -46,7 +46,7 @@ describe Dota::Player do
     player.leaver_status.must_equal :left_safe
 
     def player.raw_player; { 'leaver_status' => 2 }; end
-    player.leaver_status.must_equal :abondoned
+    player.leaver_status.must_equal :abandoned
   end
 
   it 'returns gold' do
