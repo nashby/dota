@@ -11,21 +11,21 @@ module Dota
       @raw_player = raw_player
     end
 
-    # Account id
+    # The player's Steam ID
     #
     # @return [Integer]
     def id
       raw_player['account_id']
     end
 
-    # Player slot
+    # Player's slot. If the left-most bit is set, the player was on dire
     #
     # @return [Integer]
     def slot
       raw_player['player_slot']
     end
 
-    # Hero id
+    # The ID of the hero that the player used
     #
     # @return [Integer]
     def hero_id
@@ -39,21 +39,21 @@ module Dota
       Heroes[hero_id]
     end
 
-    # Amount of kills
+    # The number of kills the player got
     #
     # @return [Integer]
     def kills
       raw_player['kills']
     end
 
-    # Amount of deaths
+    # The number of times the player died
     #
     # @return [Integer]
     def deaths
       raw_player['deaths']
     end
 
-    # Amount of assists
+    # The number of assists the player got
     #
     # @return [Integer]
     def assists
@@ -90,21 +90,21 @@ module Dota
       raw_player['gold']
     end
 
-    # Amount of last hits
+    # The number of times a player last-hit a creep
     #
     # @return [Integer]
     def last_hits
       raw_player['last_hits']
     end
 
-    # XP per minute
+    # The player's total xp/min
     #
     # @return [Integer]
     def xpm
       raw_player['xp_per_min']
     end
 
-    # Gold per minute
+    # The player's total gold/min
     #
     # @return [Integer]
     def gpm

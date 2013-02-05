@@ -37,7 +37,7 @@ module Dota
         @raw_player = raw_player
       end
 
-      # Account id
+      # The player's Steam ID
       #
       # @return [Integer]
       def id
@@ -58,7 +58,7 @@ module Dota
         Heroes[hero_id]
       end
 
-      # Player's hero id
+      # The ID of the hero that the player used
       #
       # @return [Integer]
       def hero_id

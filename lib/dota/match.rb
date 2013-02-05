@@ -32,7 +32,7 @@ module Dota
       raw_match['radiant_win'] ? :radiant : :dire
     end
 
-    # First blood time in seconds from the beginning of the match
+    # The time at which first blood occurred
     #
     # @return [Integer]
     def first_blood
