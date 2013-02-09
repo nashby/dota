@@ -78,6 +78,16 @@ module Dota
           :broadcaster
         end
       end
+
+      # @private
+      def to_s
+        "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
+      end
+    end
+
+    # @private
+    def to_s
+      "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
     end
   end
 end

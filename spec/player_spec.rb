@@ -92,4 +92,9 @@ describe Dota::Player do
   it 'returns xpm' do
     player.xpm.must_equal 304
   end
+
+  it 'returns string representation of the object' do
+    object_id = (player.object_id << 1).to_s(16)
+    player.inspect.must_equal "#<Dota::Player:0x#{object_id}>"
+  end
 end

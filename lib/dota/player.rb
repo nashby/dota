@@ -159,5 +159,10 @@ module Dota
     def items
       (0..5).map { |i| Items[raw_player["item_#{i}"]] }
     end
+
+    # @private
+    def to_s
+      "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
+    end
   end
 end

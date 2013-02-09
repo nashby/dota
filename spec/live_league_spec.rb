@@ -11,4 +11,9 @@ describe Dota::LiveLeague do
     live_league.players.must_be_kind_of Array
     live_league.players.first.must_be_kind_of Dota::LiveLeague::Player
   end
+
+  it 'returns string representation of the object' do
+    object_id = (live_league.object_id << 1).to_s(16)
+    live_league.inspect.must_equal "#<Dota::LiveLeague:0x#{object_id}>"
+  end
 end

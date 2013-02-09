@@ -34,34 +34,39 @@ describe Dota::Match do
   end
 
   it 'returns season' do
-      match.season.must_equal 7
+    match.season.must_equal 7
   end
 
   it 'returns duration' do
-      match.duration.must_equal 1914
+    match.duration.must_equal 1914
   end
 
   it 'returns number of human players' do
-      match.human_players.must_equal 10
+    match.human_players.must_equal 10
   end
 
   it 'returns number of positive votes' do
-      match.positive_votes.must_equal 0
+    match.positive_votes.must_equal 0
   end
 
   it 'returns number of negative votes' do
-      match.negative_votes.must_equal 0
+    match.negative_votes.must_equal 0
   end
 
   it 'returns cluster' do
-      match.cluster.must_equal 131
+    match.cluster.must_equal 131
   end
 
   it 'returns game_mode' do
-      match.mode.must_equal 'All Pick'
+    match.mode.must_equal 'All Pick'
   end
 
   it 'returns lobby type' do
-      match.lobby.must_equal 'Public matchmaking'
+    match.lobby.must_equal 'Public matchmaking'
+  end
+
+  it 'returns string representation of the object' do
+    object_id = (match.object_id << 1).to_s(16)
+    match.inspect.must_equal "#<Dota::Match:0x#{object_id}>"
   end
 end

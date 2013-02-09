@@ -18,4 +18,9 @@ describe Dota::League do
   it 'returns tournament url' do
     league.url.must_equal 'http://www.dota2.com/'
   end
+
+  it 'returns string representation of the object' do
+    object_id = (league.object_id << 1).to_s(16)
+    league.inspect.must_equal "#<Dota::League:0x#{object_id}>"
+  end
 end
