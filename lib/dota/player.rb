@@ -161,7 +161,7 @@ module Dota
     end
 
     # @private
-    def to_s
+    def inspect
       "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
     end
   end
