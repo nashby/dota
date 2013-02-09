@@ -17,8 +17,7 @@ module Dota
                 }.freeze
 
     def self.[](id)
-        GAME_MODES[id]
+      GAME_MODES[id]
     end
   end
 end
-                    

@@ -15,4 +15,3 @@ module Dota
     end
   end
 end
-
