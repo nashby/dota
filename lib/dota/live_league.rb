@@ -74,7 +74,7 @@ module Dota
           :radiant
         when 1
           :dire
-        else
+        when 2
           :broadcaster
         end
       end
