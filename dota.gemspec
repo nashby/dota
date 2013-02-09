@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Dota::VERSION
   gem.authors       = ["Vasiliy Ermolovich"]
   gem.email         = ["younash@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = "Ruby wrapper for Dota 2 WebAPI"
+  gem.description   = %q{Ruby wrapper for Dota 2 WebAPI}
+  gem.summary       = %q{Ruby wrapper for Dota 2 WebAPI}
+  gem.homepage      = "https://github.com/nashby/dota"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
