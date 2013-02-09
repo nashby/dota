@@ -2,7 +2,35 @@
 
 [![TravisCI Build Status](https://secure.travis-ci.org/nashby/dota.png?branch=master)](http://travis-ci.org/nashby/dota)
 
-WIP. Ruby wrapper for Dota 2 WebAPI
+Ruby wrapper for Dota 2 WebAPI
+
+## Usage
+
+```ruby
+Dota.configure do |config|
+  config.api_key = 'STEAM-WEB-API-KEY'
+end
+```
+
+You can get your api key [here](http://steamcommunity.com/dev/apikey)
+
+### Match details (GetMatchDetails API call)
+
+```ruby
+Dota.match(22345678)
+```
+
+### League listing (GetLeagueListing API call)
+
+```ruby
+Dota.leagues
+```
+
+### Live league games (GetLiveLeagueGames API call)
+
+```ruby
+Dota.live_leagues
+```
 
 ## Contributing
 
