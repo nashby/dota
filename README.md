@@ -1,5 +1,7 @@
 # Dota
 
+[![TravisCI Build Status](https://secure.travis-ci.org/nashby/dota.png?branch=master)](http://travis-ci.org/nashby/dota)
+
 WIP. Ruby wrapper for Dota 2 WebAPI
 
 ## Contributing
