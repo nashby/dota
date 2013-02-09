@@ -1,4 +1,6 @@
 require 'dota/player'
+require 'dota/modes'
+require 'dota/lobbies'
 
 module Dota
   class Match
@@ -57,7 +59,7 @@ module Dota
 
     # The season of the match
     #
-    # @return [Integer] 
+    # @return [Integer]
     def season
       raw_match['season']
     end
@@ -99,16 +101,16 @@ module Dota
 
     # The game mode of the match
     #
-    # @return [String] 
-    def game_mode
-      Game_Modes[raw_match['game_mode']]
+    # @return [String]
+    def mode
+      Modes[raw_match['game_mode']]
     end
 
     # The type of lobby
     #
     # @return [String]
-    def lobby_type
-      Lobbies[raw_match['lobby_type']
+    def lobby
+      Lobbies[raw_match['lobby_type']]
     end
   end
 end

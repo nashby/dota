@@ -58,10 +58,10 @@ describe Dota::Match do
   end
 
   it 'returns game_mode' do
-      match.game_mode.must_equal 'All Pick'
+      match.mode.must_equal 'All Pick'
   end
 
   it 'returns lobby type' do
-      match.lobby_type.must_equal 'Public matchmaking'
+      match.lobby.must_equal 'Public matchmaking'
   end
 end
