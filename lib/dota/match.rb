@@ -18,6 +18,13 @@ module Dota
       raw_match['match_id']
     end
 
+    # Match sequence number
+    #
+    # @return [Integer]
+    def seq_num
+      raw_match['match_seq_num']
+    end
+
     # Match's start time
     #
     # @return [Time]
@@ -46,6 +53,62 @@ module Dota
       raw_match['players'].map do |raw_player|
         Player.new(raw_player)
       end
+    end
+
+    # The season of the match
+    #
+    # @return [Integer] 
+    def season
+      raw_match['season']
+    end
+
+    # The duration of the match
+    #
+    # @return [Integer]
+    def duration
+      raw_match['duration']
+    end
+
+    # The number of human players in the match
+    #
+    # @return [Integer]
+    def human_players
+      raw_match['human_players']
+    end
+
+    # The number of positive votes
+    #
+    # @return [Integer]
+    def positive_votes
+      raw_match['positive_votes']
+    end
+
+    # The number of negative votes
+    #
+    # @return [Integer]
+    def negative_votes
+      raw_match['negative_votes']
+    end
+
+    # The cluster of the match
+    #
+    # @return [Integer]
+    def cluster
+      raw_match['cluster']
+    end
+
+    # The game mode of the match
+    #
+    # @return [String] 
+    def game_mode
+      Game_Modes[raw_match['game_mode']]
+    end
+
+    # The type of lobby
+    #
+    # @return [String]
+    def lobby_type
+      Lobbies[raw_match['lobby_type']
     end
   end
 end
