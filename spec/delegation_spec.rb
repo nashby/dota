@@ -32,4 +32,14 @@ describe 'delegation' do
 
     mock.verify
   end
+
+  it 'delegates #history to the client' do
+    mock.expect(:history, :result, [{account_id: 123456789}])
+
+    Dota.stub(:client, mock) do
+      Dota.history(account_id: 123456789).must_equal :result
+    end
+
+    mock.verify
+  end
 end

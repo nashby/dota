@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Dota::Match do
   before do
-    stub_request(:get,  'https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/?key=TEST_API_KEY&match_id=27110133').
+    stub_request(:get, 'https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/?key=TEST_API_KEY&match_id=27110133').
       to_return(status: 200, body: fixture(:match))
   end
 
