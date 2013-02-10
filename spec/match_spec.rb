@@ -65,6 +65,10 @@ describe Dota::Match do
     match.lobby.must_equal 'Public matchmaking'
   end
 
+  it 'returns league id' do
+    match.league_id.must_equal 0
+  end
+
   it 'returns string representation of the object' do
     object_id = (match.object_id << 1).to_s(16)
     match.inspect.must_equal "#<Dota::Match:0x#{object_id}>"

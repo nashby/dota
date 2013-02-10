@@ -113,6 +113,13 @@ module Dota
       Lobbies[raw_match['lobby_type']]
     end
 
+    # The leauge this match is from
+    #
+    # @return [Integer]
+    def league_id
+      raw_match['leagueid']
+    end
+
     # @private
     def inspect
       "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
