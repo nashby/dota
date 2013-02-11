@@ -1,3 +1,4 @@
+require 'dota/basic_player'
 require 'dota/heroes'
 
 module Dota
@@ -27,42 +28,12 @@ module Dota
       end
     end
 
-    class Player
-      attr_reader :raw_player
-
-      # Initializes a new Player object
-      #
-      # @param raw_player [Hash]
-      def initialize(raw_player)
-        @raw_player = raw_player
-      end
-
-      # The player's Steam ID
-      #
-      # @return [Integer]
-      def id
-        raw_player['account_id']
-      end
-
+    class Player < Dota::BasicPlayer
       # Player's nickname
       #
       # @return [String]
       def name
         raw_player['name']
-      end
-
-      # Player's hero name
-      #
-      # @return [String]
-      def hero
-        Heroes[hero_id]
-      end
-
-      # The ID of the hero that the player used
-      #
-      # @return [Integer]
-      def hero_id
-        raw_player['hero_id']
       end
 
       # Player's faction
@@ -77,11 +48,6 @@ module Dota
         when 2
           :broadcaster
         end
-      end
-
-      # @private
-      def inspect
-        "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
       end
     end
 

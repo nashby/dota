@@ -1,0 +1,53 @@
+{
+  "match_id": 121808641,
+  "match_seq_num": 111948919,
+  "start_time": 1360503461,
+  "lobby_type": 0,
+  "players": [
+    {
+      "account_id": 4294967295,
+      "player_slot": 0,
+      "hero_id": 87
+    },
+    {
+      "account_id": 4294967295,
+      "player_slot": 1,
+      "hero_id": 60
+    },
+    {
+      "account_id": 4294967295,
+      "player_slot": 2,
+      "hero_id": 25
+    },
+    {
+      "account_id": 4294967295,
+      "player_slot": 3,
+      "hero_id": 17
+    },
+    {
+      "account_id": 85082201,
+      "player_slot": 128,
+      "hero_id": 41
+    },
+    {
+      "account_id": 4294967295,
+      "player_slot": 129,
+      "hero_id": 40
+    },
+    {
+      "account_id": 40171032,
+      "player_slot": 130,
+      "hero_id": 11
+    },
+    {
+      "account_id": 4294967295,
+      "player_slot": 131,
+      "hero_id": 75
+    },
+    {
+      "account_id": 4294967295,
+      "player_slot": 132,
+      "hero_id": 30
+    }
+  ]
+}

@@ -32,6 +32,12 @@ Dota.leagues
 Dota.live_leagues
 ```
 
+### Match history (GetMatchHistory API call)
+
+```ruby
+Dota.history
+```
+
 ## Contributing
 
 1. Fork it

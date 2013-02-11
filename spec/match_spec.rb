@@ -30,7 +30,7 @@ describe Dota::Match do
 
   it 'returns players' do
     match.players.must_be_kind_of Array
-    match.players.first.must_be_kind_of Dota::Player
+    match.players.first.must_be_kind_of Dota::Match::Player
   end
 
   it 'returns season' do

@@ -1,23 +1,7 @@
 require 'spec_helper'
 
-describe Dota::Player do
-  let(:player) { Dota::Player.new(fixture(:player)) }
-
-  it 'returns account id' do
-    player.id.must_equal 75021757
-  end
-
-  it 'returns slot' do
-    player.slot.must_equal 0
-  end
-
-  it 'returns hero id' do
-    player.hero_id.must_equal 45
-  end
-
-  it 'returns hero name' do
-    player.hero.must_equal 'Pugna'
-  end
+describe Dota::Match::Player do
+  let(:player) { Dota::Match::Player.new(fixture(:match_player)) }
 
   it 'returns kills' do
     player.kills.must_equal 1
@@ -91,10 +75,5 @@ describe Dota::Player do
 
   it 'returns xpm' do
     player.xpm.must_equal 304
-  end
-
-  it 'returns string representation of the object' do
-    object_id = (player.object_id << 1).to_s(16)
-    player.inspect.must_equal "#<Dota::Player:0x#{object_id}>"
   end
 end
