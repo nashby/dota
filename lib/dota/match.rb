@@ -113,7 +113,7 @@ module Dota
       Lobbies[raw_match['lobby_type']]
     end
 
-    # The leauge this match is from
+    # The league this match is from
     #
     # @return [Integer]
     def league_id
