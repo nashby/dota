@@ -84,6 +84,34 @@ module Dota
       raw_match['leagueid']
     end
 
+    # Status of Radiant towers
+    #
+    # @return [Integer] Unsigned 11-bit binary
+    def radiant_tower_status
+      raw_match['tower_status_radiant']
+    end
+
+    # Status of Dire towers
+    #
+    # @return [Integer] Unsigned 11-bit binary
+    def dire_tower_status
+      raw_match['tower_status_dire']
+    end
+
+    # Status of Radiant barracks
+    #
+    # @return [Integer] Unsigned 6-bit binary
+    def radiant_barracks_status
+      raw_match['barracks_status_radiant']
+    end
+
+    # Status of Dire barracks
+    #
+    # @return [Integer] Unsigned 6-bit binary
+    def dire_barracks_status
+      raw_match['barracks_status_dire']
+    end
+
     class Player < Dota::BasicPlayer
       # The number of kills the player got
       #

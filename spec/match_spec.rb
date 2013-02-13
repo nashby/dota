@@ -69,6 +69,22 @@ describe Dota::Match do
     match.league_id.must_equal 0
   end
 
+  it 'returns radiant tower status' do
+    match.radiant_tower_status.must_equal 4
+  end
+
+  it 'returns dire tower status' do
+    match.dire_tower_status.must_equal 1974
+  end
+
+  it 'returns radiant barracks status' do
+    match.radiant_barracks_status.must_equal 3
+  end
+
+  it 'returns dire barracks status' do
+    match.dire_barracks_status.must_equal 63
+  end
+
   it 'returns string representation of the object' do
     object_id = (match.object_id << 1).to_s(16)
     match.inspect.must_equal "#<Dota::Match:0x#{object_id}>"
