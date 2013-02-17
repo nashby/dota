@@ -63,9 +63,11 @@ module Dota
       end
     end
 
+    private
+
     # @private
-    def run_request method, options = { }, interface = 'IDOTA2Match'
-      url      = "https://api.steampowered.com/#{interface}_570/#{method}/#{API_VERSION}/"
+    def run_request(method, options = {}, interface = 'IDOTA2Match')
+      url = "https://api.steampowered.com/#{interface}_570/#{method}/#{API_VERSION}/"
       connection.request(:get, url, options.merge(key: config.api_key))
     end
   end
