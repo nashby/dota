@@ -1,8 +1,10 @@
 require 'dota/basic_player'
 require 'dota/heroes'
+require 'dota/inspectable'
 
 module Dota
   class LiveLeague
+    include Inspectable
     attr_reader :raw_live_league
 
     # Initializes a new LiveLeague object
@@ -49,11 +51,6 @@ module Dota
           :broadcaster
         end
       end
-    end
-
-    # @private
-    def inspect
-      "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
     end
   end
 end

@@ -1,5 +1,8 @@
+require 'dota/inspectable'
+
 module Dota
   class BasicMatch
+    include Inspectable
     attr_reader :raw_match
 
     # Initializes a new Match object
@@ -35,11 +38,6 @@ module Dota
     # @return [String]
     def lobby
       Lobbies[raw_match['lobby_type']]
-    end
-
-    # @private
-    def inspect
-      "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
     end
   end
 end

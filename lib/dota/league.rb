@@ -1,5 +1,8 @@
+require 'dota/inspectable'
+
 module Dota
   class League
+    include Inspectable
     attr_reader :raw_league
 
     # Initializes a new League object
@@ -35,11 +38,6 @@ module Dota
     # @return [String]
     def url
       raw_league['tournament_url']
-    end
-
-    # @private
-    def inspect
-      "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
     end
   end
 end

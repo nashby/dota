@@ -1,7 +1,9 @@
 require 'dota/items'
+require 'dota/inspectable'
 
 module Dota
   class BasicPlayer
+    include Inspectable
     attr_reader :raw_player
 
     # Initializes a new Player object
@@ -37,11 +39,6 @@ module Dota
     # @ return [String]
     def hero
       Heroes[hero_id]
-    end
-
-    # @private
-    def inspect
-      "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
     end
   end
 end
