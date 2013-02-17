@@ -38,6 +38,24 @@ Dota.live_leagues
 Dota.history
 ```
 
+### View profiles (GetPlayerSummaries API call)
+
+```ruby
+Dota.profiles(76561197993409962)
+```
+
+### View player bans (GetPlayerBans API call)
+
+```ruby
+Dota.player_bans(76561197993409962)
+```
+
+### View friends (GetFriendList API call)
+
+```ruby
+Dota.friends(76561197993409962)
+```
+
 ## Contributing
 
 1. Fork it
