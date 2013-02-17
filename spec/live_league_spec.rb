@@ -16,10 +16,4 @@ describe Dota::LiveLeague do
     object_id = (live_league.object_id << 1).to_s(16)
     live_league.inspect.must_equal "#<Dota::LiveLeague:0x#{object_id}>"
   end
-
-  it "should return valid hash" do
-    hash = live_league.to_hash
-    hash[:id].must_equal 21
-    hash[:players].first.must_equal({ id: 26290891, slot: nil, hero: nil, name: "HolyMaster", team: nil })
-  end
 end

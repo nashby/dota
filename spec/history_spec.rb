@@ -24,13 +24,4 @@ describe Dota::History do
     history.matches.must_be_kind_of Array
     history.matches.first.must_be_kind_of Dota::History::Match
   end
-
-  it "should return valid hash" do
-    hash = history.to_hash
-    hash.has_key?(:total_count).must_equal true
-    hash.has_key?(:count).must_equal true
-    hash.has_key?(:remaining_count).must_equal true
-    hash.has_key?(:matches).must_equal true
-    hash[:matches].first[:id].must_be_kind_of Integer
-  end
 end

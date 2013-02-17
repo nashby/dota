@@ -22,5 +22,4 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rake', '~> 10.0.3'
   gem.add_development_dependency 'minitest', '~> 4.5.0'
   gem.add_development_dependency 'webmock', '~> 1.9.0'
-  gem.add_development_dependency 'awesome_print', '~> 1.1.0'
 end

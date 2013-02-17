@@ -39,10 +39,5 @@ module Dota
     def url
       raw_league['tournament_url']
     end
-
-    # @private
-    def to_hash
-      {id: id, name: name, description: description, url: url}
-    end
   end
 end

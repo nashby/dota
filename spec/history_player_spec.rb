@@ -2,10 +2,9 @@ require 'spec_helper'
 
 describe Dota::History::Player do
   let(:player) { Dota::History::Player.new(fixture(:history_player)) }
-  let(:player_id) { 4294967295 }
 
   it 'returns account id' do
-    player.id.must_equal player_id
+    player.id.must_equal 4294967295
   end
 
   it 'returns slot' do
@@ -18,9 +17,5 @@ describe Dota::History::Player do
 
   it 'returns hero name' do
     player.hero.must_equal 'Disruptor'
-  end
-
-  it "should return valid hash" do
-    player.to_hash.must_equal({ id: player_id, slot: 0, hero: 'Disruptor' })
   end
 end

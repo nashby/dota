@@ -23,12 +23,4 @@ describe Dota::League do
     object_id = (league.object_id << 1).to_s(16)
     league.inspect.must_equal "#<Dota::League:0x#{object_id}>"
   end
-
-  it "should return valid hash" do
-    league.to_hash.must_equal({ id: 65001,
-                                name: "The International",
-                                description: "Watch the top 16 teams from around the world compete in The International.",
-                                url: "http://www.dota2.com/" })
-
-  end
 end

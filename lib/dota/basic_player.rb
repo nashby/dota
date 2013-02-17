@@ -40,10 +40,5 @@ module Dota
     def hero
       Heroes[hero_id]
     end
-
-    # @private
-    def to_hash
-      {id: id, slot: slot, hero: hero}
-    end
   end
 end

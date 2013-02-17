@@ -84,12 +84,6 @@ module Dota
       raw_match['leagueid']
     end
 
-    # @private
-    def to_hash
-       {id: id, mode: mode, seq_num: seq_num, start_time: start, winner: winner,
-        duration: duration, first_blood: first_blood, players: players.map(&:to_hash) }
-    end
-
     class Player < Dota::BasicPlayer
       # The number of kills the player got
       #
@@ -210,12 +204,6 @@ module Dota
       # @return [Array<String>] an array of item names
       def items
         (0..5).map { |i| Items[raw_player["item_#{i}"]] }
-      end
-
-      # @private
-      def to_hash
-        super.to_hash.merge({ kda:    kda, gold: gold, xpm: xpm, gpm: gpm, last_hits: last_hits,
-                              denies: denies, level: level, items: items })
       end
     end
   end

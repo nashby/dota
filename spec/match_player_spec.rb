@@ -2,10 +2,6 @@ require 'spec_helper'
 
 describe Dota::Match::Player do
   let(:player) { Dota::Match::Player.new(fixture(:match_player)) }
-  let(:player_hash) { { id:    75021757, slot: 0, hero:  "Pugna",
-                         kda: [1, 12, 6], gold: 345,
-                         xpm:   304, gpm: 261, last_hits: 98, denies: 2, level: 13,
-                         items: %w(phase_boots mekansm ring_of_basilius magic_wand bracer bracer) } }
 
   it 'returns kills' do
     player.kills.must_equal 1
@@ -24,28 +20,16 @@ describe Dota::Match::Player do
   end
 
   it 'returns leaver status' do
-    def player.raw_player;
-      { 'leaver_status' => nil };
-    end
-
+    def player.raw_player; { 'leaver_status' => nil }; end
     player.leaver_status.must_equal :bot
 
-    def player.raw_player;
-      { 'leaver_status' => 0 };
-    end
-
+    def player.raw_player; { 'leaver_status' => 0 }; end
     player.leaver_status.must_equal :played
 
-    def player.raw_player;
-      { 'leaver_status' => 1 };
-    end
-
+    def player.raw_player; { 'leaver_status' => 1 }; end
     player.leaver_status.must_equal :left_safe
 
-    def player.raw_player;
-      { 'leaver_status' => 2 };
-    end
-
+    def player.raw_player; { 'leaver_status' => 2 }; end
     player.leaver_status.must_equal :abandoned
   end
 
@@ -82,7 +66,7 @@ describe Dota::Match::Player do
   end
 
   it 'returns items' do
-    player.items.must_equal player_hash[:items]
+    player.items.must_equal ['phase_boots', 'mekansm', 'ring_of_basilius', 'magic_wand', 'bracer', 'bracer']
   end
 
   it 'returns gpm' do
@@ -91,9 +75,5 @@ describe Dota::Match::Player do
 
   it 'returns xpm' do
     player.xpm.must_equal 304
-  end
-
-  it "should return valid hash" do
-    player.to_hash.must_equal player_hash
   end
 end

@@ -51,16 +51,6 @@ module Dota
           :broadcaster
         end
       end
-
-      # @private
-      def to_hash
-        super.to_hash.merge({ name: name, team: team })
-      end
-    end
-
-    # @private
-    def to_hash
-      { id: id, players: players.map(&:to_hash) }
     end
   end
 end
