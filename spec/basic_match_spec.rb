@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Dota::History::Match do
-  let(:match) { Dota::History::Match.new(fixture(:history_match)) }
+describe Dota::BasicMatch do
+  let(:match) { Dota::BasicMatch.new(fixture(:basic_match)) }
 
   it 'returns match id' do
     match.id.must_equal 121808641
@@ -19,13 +19,8 @@ describe Dota::History::Match do
     match.lobby.must_equal 'Public matchmaking'
   end
 
-  it 'returns players' do
-    match.players.must_be_kind_of Array
-    match.players.first.must_be_kind_of Dota::History::Player
-  end
-
   it 'returns string representation of the object' do
     object_id = (match.object_id << 1).to_s(16)
-    match.inspect.must_equal "#<Dota::History::Match:0x#{object_id}>"
+    match.inspect.must_equal "#<Dota::BasicMatch:0x#{object_id}>"
   end
 end
