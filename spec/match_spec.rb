@@ -73,4 +73,11 @@ describe Dota::Match do
     object_id = (match.object_id << 1).to_s(16)
     match.inspect.must_equal "#<Dota::Match:0x#{object_id}>"
   end
+
+  it "should return valid hash" do
+    hash = match.to_hash
+    hash[:id].must_equal 27110133
+    hash[:winner].must_equal :dire
+    hash[:players].first[:id].must_be_kind_of Integer
+  end
 end

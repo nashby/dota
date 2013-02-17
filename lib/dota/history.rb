@@ -2,9 +2,11 @@ require 'dota/basic_player'
 require 'dota/basic_match'
 require 'dota/heroes'
 require 'dota/lobbies'
+require 'dota/inspectable'
 
 module Dota
   class History
+    include Inspectable
     attr_reader :raw_history
 
     # Initializes a new League object
@@ -37,6 +39,11 @@ module Dota
       raw_history['results_remaining']
     end
 
+    # @private
+    def to_hash
+      {total_count: total_count, count:count, remaining_count: remaining_count, matches: matches.map(&:to_hash)}
+    end
+
     # Array of matches
     #
     # @return [Array<Dota::History::Match>] array of Dota::History::Match objects
@@ -54,6 +61,11 @@ module Dota
         raw_match['players'].map do |raw_player|
           Player.new(raw_player)
         end
+      end
+
+      # @private
+      def to_hash
+        { id: id, sequence_number: seq_num, start_time: start, lobby: lobby, players: players.map(&:to_hash) }
       end
     end
 

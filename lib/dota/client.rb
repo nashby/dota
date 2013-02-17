@@ -10,6 +10,8 @@ module Dota
   class Client
     attr_reader :config
 
+    API_VERSION = 'V001'
+
     def initialize(options = {})
       @config = Configuration.new(options)
     end
@@ -27,34 +29,25 @@ module Dota
     # @param [Integer] match id
     # @return [Dota::Match] match object
     def match(id)
-      url = "https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/"
-      response = connection.request(:get, url, { match_id: id, key: config.api_key })
-
-      if result = response['result']
-        Match.new(result)
-      end
+      response = run_request('GetMatchDetails', match_id: id)['result']
+      Match.new(response) if response
     end
 
     # The list of matches played
     #
     # @return [Dota::History] match object
     def history(options = {})
-      url = "https://api.steampowered.com/IDOTA2Match_570/GetMatchHistory/V001/"
-      response = connection.request(:get, url, options.merge(key: config.api_key))
-
-      if result = response['result']
-        History.new(result)
-      end
+      response = run_request('GetMatchHistory', options)['result']
+      History.new(response) if response
     end
 
     # All leagues list
     #
     # @return [Dota::League] league object
     def leagues(options = {})
-      url = "https://api.steampowered.com/IDOTA2Match_570/GetLeagueListing/V001/"
-      response = connection.request(:get, url, options.merge(key: config.api_key))
+      response = run_request('GetLeagueListing', options)['result']
 
-      if response['result'] && (leagues = response['result']['leagues'])
+      if response && (leagues = response['leagues'])
         leagues.map { |league| League.new(league) }
       end
     end
@@ -63,12 +56,17 @@ module Dota
     #
     # @return [Dota::League] league object
     def live_leagues(options = {})
-      url = "https://api.steampowered.com/IDOTA2Match_570/GetLiveLeagueGames/V001/"
-      response = connection.request(:get, url, options.merge(key: config.api_key))
+      response = run_request('GetLiveLeagueGames', options)['result']
 
-      if response['result'] && (leagues = response['result']['games'])
+      if response && (leagues = response['games'])
         leagues.map { |league| LiveLeague.new(league) }
       end
+    end
+
+    # @private
+    def run_request method, options = { }, interface = 'IDOTA2Match'
+      url      = "https://api.steampowered.com/#{interface}_570/#{method}/#{API_VERSION}/"
+      connection.request(:get, url, options.merge(key: config.api_key))
     end
   end
 end

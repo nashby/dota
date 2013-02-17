@@ -1,7 +1,9 @@
 require 'dota/items'
+require 'dota/inspectable'
 
 module Dota
   class BasicPlayer
+    include Inspectable
     attr_reader :raw_player
 
     # Initializes a new Player object
@@ -40,8 +42,8 @@ module Dota
     end
 
     # @private
-    def inspect
-      "#<#{self.class.name}:0x#{(object_id << 1).to_s(16)}>"
+    def to_hash
+      {id: id, slot: slot, hero: hero}
     end
   end
 end

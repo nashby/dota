@@ -2,9 +2,10 @@ require 'spec_helper'
 
 describe Dota::BasicPlayer do
   let(:player) { Dota::BasicPlayer.new(fixture(:basic_player)) }
+  let(:player_id) { 75021757 }
 
   it 'returns account id' do
-    player.id.must_equal 75021757
+    player.id.must_equal player_id
   end
 
   it 'returns slot' do
@@ -22,5 +23,9 @@ describe Dota::BasicPlayer do
   it 'returns string representation of the object' do
     object_id = (player.object_id << 1).to_s(16)
     player.inspect.must_equal "#<Dota::BasicPlayer:0x#{object_id}>"
+  end
+
+  it "should return player hash" do
+    player.to_hash.must_equal({ id: player_id, slot: 0, hero: 'Pugna' })
   end
 end

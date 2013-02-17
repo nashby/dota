@@ -27,4 +27,8 @@ describe Dota::LiveLeague::Player do
     object_id = (player.object_id << 1).to_s(16)
     player.inspect.must_equal "#<Dota::LiveLeague::Player:0x#{object_id}>"
   end
+
+  it "should return valid hash" do
+    player.to_hash.must_equal({id: 44463405, slot: nil, hero: 'Keeper of the Light', name: 'EG.Bdiz [RC]', team: :radiant})
+  end
 end
