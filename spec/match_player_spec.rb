@@ -41,7 +41,7 @@ describe Dota::Match::Player do
     player.last_hits.must_equal 98
   end
 
-  it 'returns the number of times a player denied a creep' do
+  it 'returns denies' do
     player.denies.must_equal 2
   end
 
@@ -75,5 +75,17 @@ describe Dota::Match::Player do
 
   it 'returns xpm' do
     player.xpm.must_equal 304
+  end
+
+  it 'returns additional unit names' do
+    player.additional_unit_names.must_equal 'spirit_bear'
+  end
+
+  it 'returns additional unit items' do
+    player.additional_unit_items.must_equal ['orb_of_venom', 'stout_shield', 'emptyitembg', 'emptyitembg', 'emptyitembg', 'emptyitembg']
+  end
+
+  it 'returns ability upgrades' do
+    player.upgrades[0].must_equal ({"ability" => 5412, "time" => 97, "level" => 1})
   end
 end
