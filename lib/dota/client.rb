@@ -13,8 +13,7 @@ module Dota
   class Client
     attr_reader :config
 
-    VERSIONS = { 1 => 'V001',
-                 2 => 'V002' }.freeze
+    VERSIONS = { 1 => 'V001', 2 => 'V002' }.freeze
 
     def initialize(options = {})
       @config = Configuration.new(options)
@@ -71,18 +70,16 @@ module Dota
     #
     # @return [Dota::Profile] match object
     def profiles(*ids)
-      raise "Require steam id" unless ids
+      response = run_request('GetPlayerSummaries', { steamids: ids.join(',') }, 'ISteamUser', VERSIONS[2])['response']
 
-      response = run_request('GetPlayerSummaries', { steamids: ids.join(",") }, 'ISteamUser', VERSIONS[2])['response']
       if response && (profiles = response['players'])
         profiles.map { |profile| Profile.new(profile) }
       end
     end
 
     def player_bans(*ids)
-      raise "Require steam id" unless ids
-
       response = run_request('GetPlayerBans', { steamids: ids.join(",") }, 'ISteamUser')
+
       if response && (player_bans = response['players'])
         player_bans.map { |ban| PlayerBan.new(ban) }
       end
@@ -90,13 +87,14 @@ module Dota
 
     def friends id
       response = run_request('GetFriendList', { steamid: id }, 'ISteamUser')
+
       if response && (friends = response["friendslist"]["friends"])
         friends.map { |friend| Friend.new(friend) }
       end
     end
 
     # @private
-    def run_request(method, options = { }, interface = 'IDOTA2Match_570', api_version = VERSIONS[1])
+    def run_request(method, options = {}, interface = 'IDOTA2Match_570', api_version = VERSIONS[1])
       url = "https://api.steampowered.com/#{interface}/#{method}/#{api_version}/"
       connection.request(:get, url, options.merge(key: config.api_key))
     end

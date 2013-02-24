@@ -1,10 +1,10 @@
-require 'dota/inspectable'
-require 'dota/community_visibility'
-require 'dota/profile_status'
+require 'dota/utils/inspectable'
+require 'dota/constants/community_visibility'
+require 'dota/constants/profile_status'
 
 module Dota
   class Profile
-    include Inspectable
+    include Utils::Inspectable
     attr_reader :raw_profile
 
     # Initializes a new Profile object
@@ -67,7 +67,7 @@ module Dota
     #
     # @return [String]
     def access_state
-      CommunityVisibility[raw_profile['communityvisibilitystate']]
+      Constants::CommunityVisibility[raw_profile['communityvisibilitystate']]
     end
 
     # Return true if the user has configured the profile
@@ -81,7 +81,7 @@ module Dota
     #
     # @return [String]
     def status
-      ProfileStatus[raw_profile['personastate']]
+      Constants::ProfileStatus[raw_profile['personastate']]
     end
 
     # Time user was online
