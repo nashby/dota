@@ -66,9 +66,13 @@ module Dota
       end
     end
 
-    # @param [Integer] A list of 64 bit IDs to retrieve profiles for
+    # A list of Profile objects.
+    # Contained information varies depending on whether or not the user
+    # has their profile set to Friends only or Private
     #
-    # @return [Dota::Profile] match object
+    # @param [Integer] SteamId
+    #
+    # @return [Array<Dota::Profile>] an array of profile objects
     def profiles(*ids)
       response = run_request('GetPlayerSummaries', { steamids: ids.join(',') }, 'ISteamUser', VERSIONS[2])['response']
 
@@ -77,6 +81,10 @@ module Dota
       end
     end
 
+    # List of player ban objects for each given (and valid) 64 bit ID.
+    #
+    # @param [Integer] SteamId
+    # @return [Array<Dota::PlayerBan>] an array of player's bans
     def player_bans(*ids)
       response = run_request('GetPlayerBans', { steamids: ids.join(',') }, 'ISteamUser')
 
@@ -85,6 +93,10 @@ module Dota
       end
     end
 
+    # List of player's friends
+    #
+    # @param [Integer] SteamId
+    # @return [Array<Dota::Friend>] an array of player's friends
     def friends(id)
       response = run_request('GetFriendList', { steamid: id }, 'ISteamUser')
 
