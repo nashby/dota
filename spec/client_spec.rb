@@ -50,4 +50,31 @@ describe Dota::Client do
     live_leagues = client.live_leagues
     live_leagues.must_be_nil
   end
+
+  it 'returns friends' do
+    stub_request(:get,  'https://api.steampowered.com/ISteamUser/GetFriendList/V001/?key=TEST_API_KEY&steamid=123').
+      to_return(status: 200, body: fixture(:friends))
+
+    friends = client.friends(123)
+    friends.must_be_kind_of Array
+    friends.first.must_be_kind_of Dota::Friend
+  end
+
+  it 'returns bans' do
+    stub_request(:get,  'https://api.steampowered.com/ISteamUser/GetPlayerBans/V001/?key=TEST_API_KEY&steamids=123').
+      to_return(status: 200, body: fixture(:player_bans))
+
+    bans = client.player_bans(123)
+    bans.must_be_kind_of Array
+    bans.first.must_be_kind_of Dota::PlayerBan
+  end
+
+  it 'returns profiles' do
+    stub_request(:get,  'https://api.steampowered.com/ISteamUser/GetPlayerSummaries/V002/?key=TEST_API_KEY&steamids=123').
+      to_return(status: 200, body: fixture(:profiles))
+
+    profiles = client.profiles(123)
+    profiles.must_be_kind_of Array
+    profiles.first.must_be_kind_of Dota::Profile
+  end
 end

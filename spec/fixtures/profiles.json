@@ -1,0 +1,22 @@
+{
+  "response": {
+    "players": {
+      "player": [
+        {
+          "steamid": "76561198047137967",
+          "communityvisibilitystate": 3,
+          "profilestate": 1,
+          "personaname": "avtorklif",
+          "lastlogoff": 1361665859,
+          "profileurl": "http://steamcommunity.com/id/avtorklif/",
+          "avatar": "http://media.steampowered.com/steamcommunity/public/images/avatars/8f/8fa8b10efc1dc21f098df93db02b084b36f36f7e.jpg",
+          "avatarmedium": "http://media.steampowered.com/steamcommunity/public/images/avatars/8f/8fa8b10efc1dc21f098df93db02b084b36f36f7e_medium.jpg",
+          "avatarfull": "http://media.steampowered.com/steamcommunity/public/images/avatars/8f/8fa8b10efc1dc21f098df93db02b084b36f36f7e_full.jpg",
+          "personastate": 1,
+          "primaryclanid": "103582791432688489",
+          "timecreated": 1313677868
+        }
+      ]
+    }
+  }
+}
