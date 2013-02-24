@@ -1,9 +1,9 @@
 require 'dota/items'
-require 'dota/inspectable'
+require 'dota/utils/inspectable'
 
 module Dota
   class BasicPlayer
-    include Inspectable
+    include Utils::Inspectable
     attr_reader :raw_player
 
     # Initializes a new Player object

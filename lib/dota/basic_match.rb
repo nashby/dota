@@ -1,8 +1,8 @@
-require 'dota/inspectable'
+require 'dota/utils/inspectable'
 
 module Dota
   class BasicMatch
-    include Inspectable
+    include Utils::Inspectable
     attr_reader :raw_match
 
     # Initializes a new Match object

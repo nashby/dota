@@ -1,10 +1,10 @@
 require 'dota/basic_player'
 require 'dota/heroes'
-require 'dota/inspectable'
+require 'dota/utils/inspectable'
 
 module Dota
   class LiveLeague
-    include Inspectable
+    include Utils::Inspectable
     attr_reader :raw_live_league
 
     # Initializes a new LiveLeague object

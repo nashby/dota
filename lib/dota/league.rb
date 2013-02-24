@@ -1,8 +1,8 @@
-require 'dota/inspectable'
+require 'dota/utils/inspectable'
 
 module Dota
   class League
-    include Inspectable
+    include Utils::Inspectable
     attr_reader :raw_league
 
     # Initializes a new League object

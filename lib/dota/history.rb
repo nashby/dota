@@ -2,11 +2,11 @@ require 'dota/basic_player'
 require 'dota/basic_match'
 require 'dota/heroes'
 require 'dota/lobbies'
-require 'dota/inspectable'
+require 'dota/utils/inspectable'
 
 module Dota
   class History
-    include Inspectable
+    include Utils::Inspectable
     attr_reader :raw_history
 
     # Initializes a new League object
