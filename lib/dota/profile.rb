@@ -59,7 +59,7 @@ module Dota
     # Profile date created.
     #
     # @return [Time]
-    def time_created
+    def created_at
       Time.at(raw_profile['timecreated'])
     end
 
@@ -101,21 +101,21 @@ module Dota
     # A Link to 32x32 image avatar
     #
     # @return [String]
-    def small_avatar_link
+    def small_avatar_url
       raw_profile['avatar']
     end
 
     # A Link to 64x64 image avatar
     #
     # @return [String]
-    def medium_avatar_link
+    def medium_avatar_url
       raw_profile['avatarmedium']
     end
 
     # A Link to 184x184 image avatar
     #
     # @return [String]
-    def big_avatar_link
+    def big_avatar_url
       raw_profile['avatarfull']
     end
 

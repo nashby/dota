@@ -28,7 +28,7 @@ describe Dota::Profile do
   end
 
   it 'returns time_created' do
-    profile.time_created.must_equal Time.at(1192440213)
+    profile.created_at.must_equal Time.at(1192440213)
   end
 
   it 'returns visibility_state' do
@@ -56,15 +56,15 @@ describe Dota::Profile do
   end
 
   it 'returns small_avatar_link' do
-    profile.small_avatar_link.must_equal 'http://media.steampowered.com/steamcommunity/public/images/avatars/ba/ba78600a41a6b93fb805bb8a959835ce7962ff45.jpg'
+    profile.small_avatar_url.must_equal 'http://media.steampowered.com/steamcommunity/public/images/avatars/ba/ba78600a41a6b93fb805bb8a959835ce7962ff45.jpg'
   end
 
   it 'returns medium_avatar_link' do
-    profile.medium_avatar_link.must_equal 'http://media.steampowered.com/steamcommunity/public/images/avatars/ba/ba78600a41a6b93fb805bb8a959835ce7962ff45_medium.jpg'
+    profile.medium_avatar_url.must_equal 'http://media.steampowered.com/steamcommunity/public/images/avatars/ba/ba78600a41a6b93fb805bb8a959835ce7962ff45_medium.jpg'
   end
 
   it 'returns big_avatar_link' do
-    profile.big_avatar_link.must_equal 'http://media.steampowered.com/steamcommunity/public/images/avatars/ba/ba78600a41a6b93fb805bb8a959835ce7962ff45_full.jpg'
+    profile.big_avatar_url.must_equal 'http://media.steampowered.com/steamcommunity/public/images/avatars/ba/ba78600a41a6b93fb805bb8a959835ce7962ff45_full.jpg'
   end
 
   it 'returns game id' do
