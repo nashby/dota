@@ -1,4 +1,4 @@
-require 'dota/items'
+require 'dota/constants/heroes'
 require 'dota/utils/inspectable'
 
 module Dota
@@ -38,7 +38,7 @@ module Dota
     #
     # @ return [String]
     def hero
-      Heroes[hero_id]
+      Constants::Heroes[hero_id]
     end
   end
 end

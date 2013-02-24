@@ -1,5 +1,4 @@
 require 'dota/basic_player'
-require 'dota/heroes'
 require 'dota/utils/inspectable'
 
 module Dota

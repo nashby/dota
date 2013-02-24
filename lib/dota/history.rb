@@ -1,7 +1,5 @@
 require 'dota/basic_player'
 require 'dota/basic_match'
-require 'dota/heroes'
-require 'dota/lobbies'
 require 'dota/utils/inspectable'
 
 module Dota

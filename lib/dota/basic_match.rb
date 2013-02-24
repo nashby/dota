@@ -1,4 +1,5 @@
 require 'dota/utils/inspectable'
+require 'dota/constants/lobbies'
 
 module Dota
   class BasicMatch
@@ -37,7 +38,7 @@ module Dota
     #
     # @return [String]
     def lobby
-      Lobbies[raw_match['lobby_type']]
+      Constants::Lobbies[raw_match['lobby_type']]
     end
   end
 end

@@ -1,7 +1,7 @@
 require 'dota/basic_player'
 require 'dota/basic_match'
-require 'dota/modes'
-require 'dota/lobbies'
+require 'dota/constants/modes'
+require 'dota/constants/items'
 
 module Dota
   class Match < BasicMatch
@@ -74,7 +74,7 @@ module Dota
     #
     # @return [String]
     def mode
-      Modes[raw_match['game_mode']]
+      Constants::Modes[raw_match['game_mode']]
     end
 
     # The league this match is from
@@ -231,7 +231,7 @@ module Dota
       #
       # @return [Array<String>] an array of item names
       def items
-        (0..5).map { |i| Items[raw_player["item_#{i}"]] }
+        (0..5).map { |i| Constants::Items[raw_player["item_#{i}"]] }
       end
     end
   end
