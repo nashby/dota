@@ -78,17 +78,17 @@ module Dota
     end
 
     def player_bans(*ids)
-      response = run_request('GetPlayerBans', { steamids: ids.join(",") }, 'ISteamUser')
+      response = run_request('GetPlayerBans', { steamids: ids.join(',') }, 'ISteamUser')
 
       if response && (player_bans = response['players'])
         player_bans.map { |ban| PlayerBan.new(ban) }
       end
     end
 
-    def friends id
+    def friends(id)
       response = run_request('GetFriendList', { steamid: id }, 'ISteamUser')
 
-      if response && (friends = response["friendslist"]["friends"])
+      if response && (friends = response['friendslist']['friends'])
         friends.map { |friend| Friend.new(friend) }
       end
     end
