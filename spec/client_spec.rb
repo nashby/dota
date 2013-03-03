@@ -77,4 +77,12 @@ describe Dota::Client do
     profiles.must_be_kind_of Array
     profiles.first.must_be_kind_of Dota::Profile
   end
+
+  it 'returns one profile' do
+    stub_request(:get,  'https://api.steampowered.com/ISteamUser/GetPlayerSummaries/V002/?key=TEST_API_KEY&steamids=123').
+      to_return(status: 200, body: fixture(:profiles))
+
+    profile = client.profile(123)
+    profile.must_be_kind_of Dota::Profile
+  end
 end

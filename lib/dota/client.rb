@@ -81,6 +81,16 @@ module Dota
       end
     end
 
+    # Profile object
+    #
+    # @param [Integer] SteamId
+    #
+    # @return [<Dota::Profile>] profile for given id
+    def profile(id)
+      profiles = profiles(id)
+      profiles && profiles.first
+    end
+
     # List of player ban objects for each given (and valid) 64 bit ID.
     #
     # @param [Integer] SteamId
