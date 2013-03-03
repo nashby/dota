@@ -6,7 +6,7 @@ require 'dota/league'
 require 'dota/live_league'
 require 'dota/history'
 require 'dota/profile'
-require 'dota/player_ban'
+require 'dota/ban'
 require 'dota/friend'
 
 module Dota
@@ -84,12 +84,12 @@ module Dota
     # List of player ban objects for each given (and valid) 64 bit ID.
     #
     # @param [Integer] SteamId
-    # @return [Array<Dota::PlayerBan>] an array of player's bans
-    def player_bans(*ids)
+    # @return [Array<Dota::Ban>] an array of player's bans
+    def bans(*ids)
       response = run_request('GetPlayerBans', { steamids: ids.join(',') }, 'ISteamUser')
 
-      if response && (player_bans = response['players'])
-        player_bans.map { |ban| PlayerBan.new(ban) }
+      if response && (bans = response['players'])
+        bans.map { |ban| Ban.new(ban) }
       end
     end
 

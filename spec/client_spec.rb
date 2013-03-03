@@ -62,11 +62,11 @@ describe Dota::Client do
 
   it 'returns bans' do
     stub_request(:get,  'https://api.steampowered.com/ISteamUser/GetPlayerBans/V001/?key=TEST_API_KEY&steamids=123').
-      to_return(status: 200, body: fixture(:player_bans))
+      to_return(status: 200, body: fixture(:bans))
 
-    bans = client.player_bans(123)
+    bans = client.bans(123)
     bans.must_be_kind_of Array
-    bans.first.must_be_kind_of Dota::PlayerBan
+    bans.first.must_be_kind_of Dota::Ban
   end
 
   it 'returns profiles' do
