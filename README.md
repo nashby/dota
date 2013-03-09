@@ -47,7 +47,7 @@ Dota.profiles(76561197993409962)
 ### View player bans (GetPlayerBans API call)
 
 ```ruby
-Dota.player_bans(76561197993409962)
+Dota.bans(76561197993409962)
 ```
 
 ### View friends (GetFriendList API call)
