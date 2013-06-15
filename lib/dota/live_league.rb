@@ -20,6 +20,27 @@ module Dota
       raw_live_league['league_id']
     end
 
+    # Lobby id
+    #
+    # @return [Integer]
+    def lobby_id
+      raw_live_league['lobby_id']
+    end
+
+    # A number of spectators
+    #
+    # @return [Integer]
+    def spectators
+      raw_live_league['spectators']
+    end
+
+    # A 22-bit uint detailing if each tower is alive
+    #
+    # @return [Integer]
+    def tower_state
+      raw_live_league['tower_state']
+    end
+
     # Array of players
     #
     # @return [Array<Dota::LiveLeague::Player>] array of Dota::LiveLeague::Player objects

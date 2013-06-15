@@ -7,6 +7,18 @@ describe Dota::LiveLeague do
     live_league.id.must_equal 21
   end
 
+  it 'returns a number of spectators' do
+    live_league.spectators.must_equal 2485
+  end
+
+  it 'returns lobby id' do
+    live_league.lobby_id.must_equal 22813809906189926
+  end
+
+  it 'returns tower state' do
+    live_league.tower_state.must_equal 4040484
+  end
+
   it 'returns players' do
     live_league.players.must_be_kind_of Array
     live_league.players.first.must_be_kind_of Dota::LiveLeague::Player
