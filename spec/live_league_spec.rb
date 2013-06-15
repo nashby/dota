@@ -24,6 +24,14 @@ describe Dota::LiveLeague do
     live_league.players.first.must_be_kind_of Dota::LiveLeague::Player
   end
 
+  it 'returns dire team' do
+    live_league.dire.must_be_kind_of Dota::Team
+  end
+
+  it 'returns radiant team' do
+    live_league.radiant.must_be_kind_of Dota::Team
+  end
+
   it 'returns string representation of the object' do
     object_id = (live_league.object_id << 1).to_s(16)
     live_league.inspect.must_equal "#<Dota::LiveLeague:0x#{object_id}>"

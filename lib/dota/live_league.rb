@@ -1,4 +1,5 @@
 require 'dota/basic_player'
+require 'dota/team'
 require 'dota/utils/inspectable'
 
 module Dota
@@ -39,6 +40,22 @@ module Dota
     # @return [Integer]
     def tower_state
       raw_live_league['tower_state']
+    end
+
+    # Dota::Team object that represents
+    # information about the dire's tournament team
+    #
+    # @return [Dota::Team]
+    def dire
+      @dire ||= Team.new(raw_live_league['dire_team'])
+    end
+
+    # Dota::Team object that represents
+    # information about the radiant's tournament team
+    #
+    # @return [Dota::Team]
+    def radiant
+      @radiant ||= Team.new(raw_live_league['radiant_team'])
     end
 
     # Array of players
