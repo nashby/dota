@@ -233,6 +233,27 @@ module Dota
       def items
         (0..5).map { |i| Constants::Items[raw_player["item_#{i}"]] }
       end
+
+      # List of items on secondary unit (e.g. Syllabear's bear)
+      #
+      # @return [Array<String>] an array of item names
+      def additional_unit_items
+        (0..5).map { |i| Items[raw_player['additional_units'][0]["item_#{i}"]] }
+      end
+
+      # Names of secondary units
+      #
+      # @return [Array<String>] an array of secondary unit names
+      def additional_unit_names
+        raw_player['additional_units'][0]['unitname']   
+      end
+
+      # List of ability upgrades, their timings, and level taken at
+      #
+      # @return [Array<Hash>] an array of ability upgrades
+      def upgrades
+        (0..raw_player['ability_upgrades'].length).map { |i| raw_player['ability_upgrades'][i] }
+      end
     end
   end
 end

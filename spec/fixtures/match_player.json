@@ -21,5 +21,54 @@
   "hero_damage": 8270,
   "tower_damage": 597,
   "hero_healing": 39,
-  "level": 13
+  "level": 13,
+  "ability_upgrades": [
+					{
+						"ability": 5412,
+						"time": 97,
+						"level": 1
+					},
+					{
+						"ability": 5414,
+						"time": 277,
+						"level": 2
+					},
+					{
+						"ability": 5412,
+						"time": 329,
+						"level": 3
+					},
+					{
+						"ability": 5414,
+						"time": 460,
+						"level": 4
+					},
+					{
+						"ability": 5412,
+						"time": 580,
+						"level": 5
+					},
+					{
+						"ability": 5415,
+						"time": 794,
+						"level": 6
+					},
+					{
+						"ability": 5412,
+						"time": 1075,
+						"level": 7
+					}
+				]
+				,
+				"additional_units": [
+					{
+						"unitname": "spirit_bear",
+						"item_0": 181,
+						"item_1": 182,
+						"item_2": 0,
+						"item_3": 0,
+						"item_4": 0,
+						"item_5": 0
+					}
+				]
 }
