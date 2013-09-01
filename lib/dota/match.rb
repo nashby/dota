@@ -238,14 +238,14 @@ module Dota
       #
       # @return [Array<String>] an array of item names
       def additional_unit_items
-        (0..5).map { |i| Items[raw_player['additional_units'][0]["item_#{i}"]] }
+        (0..5).map { |i| Constants::Items[raw_player['additional_units'][0]["item_#{i}"]] }
       end
 
       # Names of secondary units
       #
       # @return [Array<String>] an array of secondary unit names
       def additional_unit_names
-        raw_player['additional_units'][0]['unitname']   
+        raw_player['additional_units'][0]['unitname']
       end
 
       # List of ability upgrades, their timings, and level taken at
