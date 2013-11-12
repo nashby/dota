@@ -101,7 +101,10 @@ module Dota
                  98 => "Timbersaw",
                  99 => "Bristlebog",
                  100 => "Tusk",
-                 101 => "Skywrath Mage"
+                 101 => "Skywrath Mage",
+                 102 => "Abaddon",
+                 103 => "Elder Titan",
+                 104 => "Legion Commander"
                 }.freeze
 
       def self.[](id)
