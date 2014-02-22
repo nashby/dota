@@ -214,7 +214,30 @@ module Dota
                211 => 'recipe_ring_of_aquila',
                212 => 'ring_of_aquila',
                213 => 'recipe_tranquil_boots',
-               214 => 'tranquil_boots'
+               214 => 'tranquil_boots',
+               215 => 'shadow_amulet',
+               216 => 'halloween_candy_corn',
+               217 => 'mystery_hook',
+               218 => 'mystery_arrow',
+               219 => 'mystery_missile',
+               220 => 'mystery_toss',
+               221 => 'mystery_vacuum',
+               226 => 'halloween_rapier',
+               228 => 'greevil_whistle',
+               235 => 'greevil_whistle_toggle',
+               227 => 'present',
+               229 => 'winter_stocking',
+               230 => 'winter_skates',
+               231 => 'winter_cake',
+               232 => 'winter_cookie',
+               233 => 'winter_coco',
+               234 => 'winter_ham',
+               236 => 'winter_kringle',
+               237 => 'winter_mushroom',
+               238 => 'winter_greevil_treat',
+               239 => 'winter_greevil_garbage',
+               240 => 'winter_greevil_chewy',
+               241 => 'tango_single'
               }.freeze
 
       def self.[](id)
