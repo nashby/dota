@@ -104,7 +104,12 @@ module Dota
                  101 => "Skywrath Mage",
                  102 => "Abaddon",
                  103 => "Elder Titan",
-                 104 => "Legion Commander"
+                 104 => "Legion Commander",
+                 106 => "Ember Spirit",
+                 107 => "Earth Spirit",
+                 108 => "Abyssal Underlord",
+                 109 => "Terrorblade",
+                 110 => "Phoenix"
                 }.freeze
 
       def self.[](id)
