@@ -19,7 +19,7 @@ module Dota
                 15 => 'Custom',
                 16 => 'Captains Draft',
                 17 => 'Balanced Draft',
-                18 => 'Ability Draft',
+                18 => 'Ability Draft'
               }.freeze
 
       def self.[](id)
