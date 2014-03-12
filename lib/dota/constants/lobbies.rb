@@ -9,6 +9,8 @@ module Dota
                   3 => 'Tutorial',
                   4 => 'Co-op with bots',
                   5 => 'Team match',
+                  6 => 'Solo Queue',
+                  7 => 'Ranked'
                 }.freeze
 
       def self.[](id)

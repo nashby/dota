@@ -14,7 +14,12 @@ module Dota
                 10 => 'Tutorial',
                 11 => 'Mid Only',
                 12 => 'Least Played',
-                13 => 'New Player Pool'
+                13 => 'New Player Pool',
+                14 => 'Compendium Matchmaking',
+                15 => 'Custom',
+                16 => 'Captains Draft',
+                17 => 'Balanced Draft',
+                18 => 'Ability Draft',
               }.freeze
 
       def self.[](id)
